@@ -1,0 +1,39 @@
+
+		
+		#chartArea{
+			display: none;
+			border: 1px #ccc;
+			background-position: 0% 50%;
+			background-size: cover;
+		}
+		
+		#chartHeading
+		{
+			font-weight:normal;color:#000000;letter-spacing:0pt;word-spacing:0pt;font-size:15px;text-align:center;font-family:Lato, verdana, arial, sans-serif;line-height:1;
+		}
+		
+		#totalName
+		{
+			font-weight:bold;color:#000000;letter-spacing:0pt;text-align:center;word-spacing:0pt;font-size:20px;font-family:Lato, verdana, arial, sans-serif;line-height:1;
+		}
+
+		#itemValue
+		{
+			color:#3498DB;letter-spacing:0pt;word-spacing:0pt;font-size:30px;text-align:center;font-family:Lato, verdana, arial, sans-serif;line-height:1;
+		}
+		
+		#itemName
+		{
+			font-weight:normal;color:#BFC9CA;letter-spacing:0pt;word-spacing:0pt;font-size:15px;text-align:center;font-family:Lato, verdana, arial, sans-serif;line-height:1;
+		}
+		
+		.counties {
+			stroke: #fff;
+		}
+			
+		.states {
+			stroke: #fff;
+			stroke-linejoin: round;
+		}
+		
+		

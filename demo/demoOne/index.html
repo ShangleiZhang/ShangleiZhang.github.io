@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="Shanglei Zhang">
+    <title>Dev Workshop</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=1, minimum-scale=1.0, maximum-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/sweetalert2/6.2.0/sweetalert2.min.css" type="text/css" rel="stylesheet"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="wrapper">
+    <nav class="nav-down">
+        <div class="logo">
+
+        </div>
+        <div class="welcomeUser">
+            <h3 id="name"></h3>
+        </div>
+
+        <div class="links">
+            <div id="signup">Sign Up</div>
+            <div id="login">Log In</div>
+
+        </div>
+    </nav>
+
+    <div class="landing">
+        <div class="welcome">
+            <h1>WELCOME TO <br/>DEV WORKSHOP</h1>
+            <h2>#DevWorkshop16</h2>
+
+            <div class="social">
+                <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                <i class="fa fa-gitlab fa-lg" aria-hidden="true"></i>
+            </div>
+            <div class="afterLogIn">
+                <button class="addTopic">
+                    ADD TOPIC
+                </button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="form-wrapper">
+        <div class="signupModal">
+            <div class="bg1"></div>
+            <div class="signupForm">
+                <div class="suHeader">
+                    <h3>Join Dev Workshop!</h3>
+                </div>
+
+                <div class="suForm login-form">
+                    <form id="signUpForm">
+
+                        <input id="su-fullName" class="form-control" type="text" placeholder="Enter Your Full Name">
+                        <input id="su-userName"class="form-control" type="email" placeholder="Enter Your Email Address">
+                        <input id="su-password" class="form-control" type="password" placeholder="Enter Your Password">
+                        <textarea id="su-bio" class="text-control" cols="20" rows="20" name="bio"
+                                  placeholder="Tell Us Something About You"></textarea>
+                        <button class="submit">SIGN UP</button>
+                    </form>
+                    <p>Already Have an Account? Please <em class="logInLink">LOG IN</em>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="loginModal">
+            <div class="bg2"></div>
+            <div class="loginForm">
+                <div class="suHeader">
+                    <h3>It is good to have you back!</h3>
+                </div>
+
+                <div class="suForm signUp-form">
+                    <form id="loginForm">
+                        <input id="username" class="form-control" type="text" placeholder="Enter Your Email Address">
+                        <input id="password" class="form-control" type="password" placeholder="Enter Your Password">
+                        <button class="submit">LOG IN</button>
+                    </form>
+                    <p>Don't Have an Account? <em class="signUpLink">SIGN UP</em> Now!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="topic">
+        <div class="bg3"></div>
+        <div class="topicList">
+            <div class="suHeader">
+                <h3>Thank You for Submitting the Topics!</h3>
+            </div>
+            <ul>
+
+            </ul>
+            <button class="addMoreTopic">ADD MORE TOPIC?</button>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="footerContents">
+        <div class="contact">
+            <h3>General Inquiry</h3>
+
+            <p>E-mail: zhangshanglei@gmail.com</p>
+            <p>Phone: (404)771-3499</p>
+            <br/>
+            <h3>Mail Address</h3>
+            <p>School of Informatics and Computing, IUPUI</p>
+            <p>535 W. Michigan Street</p>
+            <p>Indianapolis, IN 46202, U.S.A.</p>
+        </div>
+
+        <div class="newsLetter">
+            <h3>Sign Up To Receive Emails About Dev Workshop, Events, &amp; More!</h3>
+            <input class="form-news" type="email" placeholder="Email Address">
+            <input class="signUpNews" type="submit" value="Sign Up Newsletter">
+        </div>
+    </div>
+
+    <div class="copyRight">
+        <p>Copyright 2016 &copy; Dev Workshop</p>
+        <p class="BackToTop"><a href="index.html">Back to Top
+            <i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+        </p>
+    </div>
+
+</footer>
+
+<script src="lib/jquery-3.1.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/sweetalert2/6.2.0/sweetalert2.min.js"></script>
+<script src="app/test.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="Shanglei">
+    <title>My Journey</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=1, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+</head>
+<body>
+
+<nav>
+    <div class="logo" id="logo"><h1>EXPLORE</h1></div>
+    <div class="navRight">
+        <div class="links">
+            <ul>
+                <li><a id="home" href="#homeSection" data-content="HOME">HOME</a></li>
+                <li><a id="place" href="#placeSection" data-content="PLACE">PLACE</a></li>
+                <li><a id="work" href="#workSection" data-content="WORK">WORK</a></li>
+                <li><a id="travel" href="#travelSection" data-content="TRAVEL">TRAVEL</a></li>
+                <li><a id="hobby" href="#hobbySection" data-content="HOBBY">HOBBY</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <div class="social">
+                <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                <i class="fa fa-dribbble fa-lg" aria-hidden="true"></i>
+                <i class="fa fa-gitlab fa-lg" aria-hidden="true"></i>
+                <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+
+</nav>
+
+<div class="content">
+    <section id="homeSection" class="homeSection">
+        <svg viewbox="0 0 200 85">
+            <text text-anchor="start" x="10" y="30" class="text text-stroke" clip-path="url(#text1)">Unknown</text>
+            <text text-anchor="start" x="10" y="50" class="text text-stroke" clip-path="url(#text2)">Journey</text>
+            <text text-anchor="start" x="10" y="70" class="text text-stroke" clip-path="url(#text3)">Begins.</text>
+            <text text-anchor="start" x="10" y="30" class="text text-stroke text-stroke-2" clip-path="url(#text1)">Unknown</text>
+            <text text-anchor="start" x="10" y="50" class="text text-stroke text-stroke-2" clip-path="url(#text2)">Journey</text>
+            <text text-anchor="start" x="10" y="70" class="text text-stroke text-stroke-2" clip-path="url(#text3)">Begins.</text>
+            <defs>
+                <clipPath id="text1">
+                    <text text-anchor="start" x="10" y="30" class="text">Unknown</text>
+                </clipPath>
+                <clipPath id="text2">
+                    <text text-anchor="start" x="10" y="50" class="text">Journey</text>
+                </clipPath>
+                <clipPath id="text3">
+                    <text text-anchor="start" x="10" y="70" class="text">Begins.</text>
+                </clipPath>
+            </defs>
+        </svg>
+    </section>
+
+    <section id="placeSection" class="placeSection">
+
+            <object id="map" class="map" type="image/png" data="assets/map.png">
+            </object>
+
+    </section>
+
+    <section id="workSection" class="workSection">
+        <ul class="fly-in-text hidden">
+            <li>SEATTLE</li>
+            <li>NEW YORK</li>
+            <li>TOKYO</li>
+            <li>SYDNEY</li>
+            <li>SINGAPORE</li>
+            <li>TORONTO</li>
+        </ul>
+
+    </section>
+
+    <section id="travelSection" class="travelSection">
+        <div class="quote">
+            <i class="fa fa-quote-left fa-5x" aria-hidden="true"></i>
+            <p>Find Someone Be Part Of Your Dream.</p>
+            <i class="fa fa-quote-right fa-5x" aria-hidden="true"></i>
+        </div>
+    </section>
+
+    <section id="hobbySection" class="hobbySection">
+        <div class="quote">
+            <i class="fa fa-quote-left fa-5x" aria-hidden="true"></i>
+            <p>Let Your Dream Grow Alongside Your Journey.</p>
+            <i class="fa fa-quote-right fa-5x" aria-hidden="true"></i>
+        </div>
+    </section>
+
+</div>
+<!--put jQuery b4 js file, or it doesn't work-->
+<script src="lib/jquery-3.1.0.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

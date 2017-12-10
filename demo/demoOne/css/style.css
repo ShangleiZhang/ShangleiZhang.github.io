@@ -1,0 +1,558 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 16px; }
+
+.nav-down {
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid #F7FFF7;
+  background-color: rgba(26, 83, 92, 0.5);
+  top: 0;
+  transition: top 0.5s ease-in-out;
+  position: fixed;
+  display: flex;
+  justify-content: space-between; }
+  .nav-down .logo {
+    min-width: 250px;
+    min-height: 100px;
+    margin-left: 100px;
+    background-image: url("../images/devLogo.jpg");
+    background-color: #F7FFF7;
+    background-repeat: no-repeat; }
+  .nav-down .links {
+    margin-right: 100px;
+    width: 600px;
+    display: flex;
+    justify-content: flex-end; }
+  .nav-down .links div {
+    margin: auto 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-weight: lighter;
+    color: #F7FFF7;
+    border: 1px solid #F7FFF7; }
+  .nav-down .links div:hover {
+    background-color: #4ECDC4;
+    color: #F7FFF7; }
+  .nav-down .welcomeUser {
+    margin-right: 100px;
+    height: 100%;
+    width: 300px;
+    text-align: center;
+    color: #F7FFF7;
+    display: none; }
+  .nav-down #name {
+    padding: 35px;
+    font-size: 24px;
+    font-weight: normal; }
+
+.nav-up {
+  top: -100px;
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid #F7FFF7;
+  background-color: rgba(26, 83, 92, 0.5);
+  transition: top 0.5s ease-in-out;
+  position: fixed;
+  display: flex;
+  justify-content: space-between; }
+  .nav-up .logo {
+    min-width: 250px;
+    min-height: 100px;
+    margin-left: 100px;
+    background-image: url("../images/devLogo.jpg");
+    background-color: #F7FFF7; }
+  .nav-up .links {
+    margin-right: 100px;
+    width: 400px;
+    display: flex;
+    justify-content: flex-end; }
+  .nav-up .links div {
+    margin: auto 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-weight: lighter;
+    color: #F7FFF7;
+    border: 1px solid #F7FFF7; }
+  .nav-up .links div:hover {
+    background-color: #4ECDC4;
+    color: #F7FFF7; }
+  .nav-up .welcomeUser {
+    margin-right: 100px;
+    height: 100%;
+    width: 300px;
+    text-align: center;
+    color: #F7FFF7;
+    display: none; }
+  .nav-up #name {
+    padding: 35px;
+    font-size: 24px;
+    font-weight: normal; }
+
+@media screen and (max-width: 800px) {
+  .nav-down {
+    height: 200px;
+    flex-direction: column;
+    justify-content: space-between; }
+    .nav-down .logo {
+      margin: 0 auto; }
+    .nav-down .links {
+      width: 250px;
+      margin: auto;
+      justify-content: space-between; }
+    .nav-down .links div {
+      margin: 0; }
+    .nav-down .welcomeUser {
+      display: none;
+      margin: auto; }
+
+  .nav-up {
+    height: 200px;
+    flex-direction: column;
+    justify-content: space-between; }
+    .nav-up .logo {
+      margin: 0 auto; }
+    .nav-up .links {
+      width: 250px;
+      margin: auto;
+      justify-content: space-between; }
+    .nav-up .links div {
+      margin: 0; }
+    .nav-up .welcomeUser {
+      display: none;
+      margin: auto; } }
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  background-image: url("../images/bk-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.landing {
+  height: 100%;
+  width: 100%;
+  color: #1A535C;
+  display: flex; }
+  .landing .welcome {
+    margin: 350px auto;
+    text-align: center; }
+    .landing .welcome h1 {
+      font-weight: 900;
+      font-size: 6em; }
+    .landing .welcome .social i {
+      padding: 10px; }
+    .landing .welcome .social i:hover {
+      color: #F7FFF7; }
+
+.addTopic {
+  background-color: #4ECDC4;
+  border: none;
+  margin: 10px auto;
+  display: block;
+  width: 94%;
+  height: 50px;
+  padding: 6px 12px;
+  line-height: 1.5;
+  color: #F7FFF7;
+  font-size: 20px;
+  font-weight: 100;
+  visibility: hidden; }
+  .addTopic:hover {
+    background-color: #1A535C; }
+
+.topic {
+  position: fixed;
+  z-index: 199;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  visibility: hidden; }
+  .topic .bg3 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 83, 92, 0.3); }
+  .topic .topicList {
+    font-weight: 100;
+    border-bottom: solid 1px #1A535C;
+    z-index: 99;
+    width: 50%;
+    min-height: 60%;
+    margin: auto;
+    color: #1A535C;
+    background-color: #F7FFF7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    .topic .topicList .suHeader {
+      color: #1A535C;
+      padding: 30px 10px 30px 30px;
+      box-sizing: border-box;
+      text-align: center; }
+      .topic .topicList .suHeader h3 {
+        font-size: 30px;
+        font-weight: 100;
+        text-align: center; }
+    .topic .topicList li {
+      padding: auto 30px;
+      list-style: none;
+      display: block;
+      text-align: center; }
+    .topic .topicList li:nth-child(odd) {
+      font-weight: normal;
+      font-size: 24px;
+      padding-bottom: 10px; }
+    .topic .topicList li:nth-child(even) {
+      font-weight: lighter;
+      font-size: 16px; }
+    .topic .topicList .submit:hover {
+      background-color: #1A535C; }
+    .topic .topicList .addMoreTopic {
+      background-color: #4ECDC4;
+      border: none;
+      margin: 10px auto;
+      display: block;
+      width: 94%;
+      height: 50px;
+      padding: 6px 12px;
+      line-height: 1.5;
+      color: #F7FFF7;
+      font-size: 20px;
+      font-weight: 100;
+      background-image: none; }
+    .topic .topicList .addMoreTopic:hover {
+      background-color: #1A535C; }
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    min-height: 100%; }
+
+  .landing {
+    min-height: 100%; }
+    .landing .welcome {
+      margin: 200px auto; }
+      .landing .welcome h1 {
+        font-weight: 700;
+        font-size: 4em; } }
+@media screen and (max-width: 600px) {
+  .wrapper {
+    min-height: 100%; }
+
+  .landing {
+    min-height: 100%; }
+    .landing .welcome {
+      margin: 200 px auto; }
+      .landing .welcome h1 {
+        font-weight: 700;
+        font-size: 3em; } }
+.signupModal {
+  position: fixed;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  visibility: hidden; }
+  .signupModal .bg1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 83, 92, 0.3); }
+  .signupModal .signupForm {
+    font-weight: 100;
+    border-bottom: solid 1px #1A535C;
+    background-color: #F7FFF7;
+    z-index: 99;
+    width: 50%;
+    min-height: 60%;
+    margin: auto; }
+    .signupModal .signupForm .suHeader {
+      color: #1A535C;
+      padding: 50px 10px 0 30px;
+      box-sizing: border-box;
+      text-align: center; }
+      .signupModal .signupForm .suHeader h3 {
+        font-size: 30px;
+        font-weight: 100;
+        text-align: center; }
+    .signupModal .signupForm .suForm {
+      padding: 30px;
+      box-sizing: border-box; }
+      .signupModal .signupForm .suForm .form-control {
+        margin: 10px auto;
+        display: block;
+        width: 90%;
+        height: 35px;
+        padding: 6px 12px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 100;
+        line-height: 1.5;
+        color: #1A535C;
+        background-color: #F7FFF7;
+        background-image: none;
+        border: 1px solid #1A535C; }
+      .signupModal .signupForm .suForm input {
+        display: block;
+        width: 90%;
+        height: 30px;
+        margin: auto; }
+      .signupModal .signupForm .suForm .text-control {
+        margin: 10px auto;
+        display: block;
+        width: 90%;
+        height: 100px;
+        padding: 6px 12px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 100;
+        line-height: 1.5;
+        color: #1A535C;
+        background-color: #F7FFF7;
+        background-image: none;
+        border: 1px solid #1A535C; }
+      .signupModal .signupForm .suForm .submit {
+        background-color: #4ECDC4;
+        border: none;
+        margin: 10px auto;
+        display: block;
+        width: 94%;
+        height: 50px;
+        padding: 6px 12px;
+        line-height: 1.5;
+        color: #F7FFF7;
+        font-size: 20px;
+        font-weight: 100;
+        background-image: none; }
+      .signupModal .signupForm .suForm .submit:hover {
+        background-color: #1A535C; }
+      .signupModal .signupForm .suForm p {
+        float: right;
+        padding-right: 30px; }
+        .signupModal .signupForm .suForm p .logInLink {
+          color: #4ECDC4;
+          cursor: pointer;
+          text-decoration: underline; }
+        .signupModal .signupForm .suForm p .logInLink:hover {
+          color: #1A535C; }
+
+.loginModal {
+  position: fixed;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  visibility: hidden; }
+  .loginModal .bg2 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 83, 92, 0.3); }
+  .loginModal .loginForm {
+    font-weight: 100;
+    border-bottom: solid 1px #1A535C;
+    background-color: #F7FFF7;
+    z-index: 99;
+    width: 50%;
+    min-height: 60%;
+    margin: auto; }
+    .loginModal .loginForm .suHeader {
+      color: #1A535C;
+      padding: 50px 10px 0 30px;
+      box-sizing: border-box;
+      text-align: center; }
+      .loginModal .loginForm .suHeader h3 {
+        font-size: 30px;
+        font-weight: 100;
+        text-align: center; }
+      .loginModal .loginForm .suHeader .close {
+        color: #1A535C; }
+    .loginModal .loginForm .suForm {
+      padding: 30px;
+      box-sizing: border-box; }
+      .loginModal .loginForm .suForm .form-control {
+        margin: 10px auto;
+        display: block;
+        width: 90%;
+        height: 35px;
+        padding: 6px 12px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 100;
+        line-height: 1.5;
+        color: #1A535C;
+        background-color: #F7FFF7;
+        background-image: none;
+        border: 1px solid #1A535C; }
+      .loginModal .loginForm .suForm input {
+        display: block;
+        width: 90%;
+        height: 30px;
+        margin: auto; }
+      .loginModal .loginForm .suForm .submit {
+        background-color: #4ECDC4;
+        border: none;
+        margin: 10px auto;
+        display: block;
+        width: 94%;
+        height: 50px;
+        padding: 6px 12px;
+        line-height: 1.5;
+        color: #F7FFF7;
+        font-size: 20px;
+        font-weight: 100;
+        background-image: none; }
+      .loginModal .loginForm .suForm .submit:hover {
+        background-color: #1A535C; }
+      .loginModal .loginForm .suForm p {
+        float: right;
+        padding-right: 30px; }
+        .loginModal .loginForm .suForm p .signUpLink {
+          color: #4ECDC4;
+          cursor: pointer;
+          text-decoration: underline; }
+        .loginModal .loginForm .suForm p .signUpLink:hover {
+          color: #1A535C; }
+
+footer {
+  min-height: 50%;
+  width: 100%;
+  background-color: #1A535C;
+  border-top: 1px solid #F7FFF7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  footer .footerContents {
+    min-height: 100%;
+    margin: auto 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    footer .footerContents .contact {
+      height: 100%;
+      width: 100%;
+      padding: 50px;
+      color: #F7FFF7; }
+      footer .footerContents .contact h3 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 300; }
+      footer .footerContents .contact p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 100; }
+    footer .footerContents .newsLetter {
+      height: 100%;
+      width: 100%;
+      padding: 50px; }
+      footer .footerContents .newsLetter h3 {
+        color: #F7FFF7;
+        box-sizing: border-box;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 100;
+        padding-bottom: 20px; }
+      footer .footerContents .newsLetter .form-news {
+        display: block;
+        margin: 20px auto;
+        height: 50px;
+        box-sizing: border-box;
+        width: 100%;
+        background-color: #F7FFF7;
+        padding: 6px 12px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 100;
+        line-height: 1.5;
+        color: #1A535C; }
+      footer .footerContents .newsLetter .signUpNews {
+        display: block;
+        margin: 20px auto;
+        height: 50px;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 100;
+        line-height: 1.5;
+        background-color: #1A535C;
+        color: #F7FFF7;
+        border: 1px solid #F7FFF7;
+        cursor: pointer; }
+      footer .footerContents .newsLetter .signUpNews:hover {
+        background-color: #4ECDC4; }
+  footer .copyRight {
+    border-top: 1px solid #F7FFF7;
+    height: 100px;
+    margin: auto 100px;
+    display: flex;
+    justify-content: space-between;
+    color: #F7FFF7;
+    line-height: 75px; }
+    footer .copyRight p {
+      padding: 10px 50px; }
+    footer .copyRight .BackToTop a {
+      color: #F7FFF7; }
+    footer .copyRight .BackToTop a:hover {
+      color: #4ECDC4; }
+    footer .copyRight .BackToTop:hover {
+      color: #4ECDC4; }
+
+@media screen and (max-width: 800px) {
+  footer .footerContents {
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto; }
+    footer .footerContents .contact {
+      text-align: center;
+      width: 80%;
+      margin: auto;
+      padding: 10px; }
+    footer .footerContents .newsLetter {
+      width: 100%;
+      margin: auto;
+      padding: 10px;
+      background-color: #F7FFF7; }
+      footer .footerContents .newsLetter h3 {
+        color: #1A535C;
+        padding: 10px 20px; }
+      footer .footerContents .newsLetter .form-news {
+        width: 80%; }
+      footer .footerContents .newsLetter .signUpNews {
+        width: 80%; }
+  footer .copyRight {
+    border: none;
+    margin: auto 50px; }
+    footer .copyRight p {
+      padding: 10px 20px; } }
+@media screen and (max-width: 500px) {
+  footer .copyRight {
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    line-height: normal;
+    padding-top: 20px; } }

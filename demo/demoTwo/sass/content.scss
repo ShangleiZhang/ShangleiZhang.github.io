@@ -1,0 +1,222 @@
+@font-face {
+  font-family:sketchToronto;
+  src: url("../fonts/sketchToronto.otf");
+}
+
+.content{
+  height:100%;
+}
+
+section{
+  min-height:100%;
+  background-color: #ffffff;
+
+
+  &:nth-child(odd){
+    background-color: #FFD9DA;
+  }
+}
+
+.homeSection{
+  background-image: url("../assets/bk1.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+//svg call out style
+  svg {
+    background-color: rgba(92, 39, 55, .3);
+    max-width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    //transform: translate(-50%, -50%);
+    //box-shadow: 0 30px 50px -20px rgb(234, 99, 140);
+  }
+
+  .text {
+    font-family:sketchToronto;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  .text-stroke {
+    fill: none;
+    stroke: #EA638C;
+    stroke-width: 2px;
+    stroke-dashoffset: -900;
+    stroke-dasharray: 900;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    animation: dash 2.5s ease-in-out forwards;
+  }
+
+  .text-stroke:nth-child(2) {
+    animation-delay: .3s;
+  }
+
+  .text-stroke:nth-child(3) {
+    animation-delay: .6s;
+  }
+
+  .text-stroke-2 {
+    stroke: #f6bdfa;
+    animation-delay: 1.2s;
+  }
+
+  .text-stroke:nth-child(5) {
+    animation-delay: 1.5s;
+  }
+
+  .text-stroke:nth-child(6) {
+    animation-delay: 1.8s;
+  }
+
+  @keyframes dash {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+
+
+.placeSection{
+  height:100%;
+  //background-image: url("../assets/bk2.jpg");
+  position: relative;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, rgba(92, 39, 55, .3) 0%,rgba(92, 39, 55, .3) 100%), url("../assets/bk2.jpg");
+
+
+  object{
+    padding:10% 20%;
+    opacity:0;
+  }
+
+}
+
+.workSection {
+  background-image: url("../assets/bk3.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  .fly-in-text{
+    //background-color: #191919;
+    width: 35%;
+    list-style: none;
+    position:relative;
+    margin-left:53%;
+    margin-top:20%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .fly-in-text li{
+    display:inline-block;
+    margin-right: 50px;
+    font-family: sketchToronto;
+    font-size: 3em;
+    font-weight: 400;
+    color:#EA638C;
+    opacity: 1;
+    transition: all 2.5s ease;
+  }
+
+  .fly-in-text li:last-child{
+    margin-right: 0;
+  }
+
+  //.fly-in-text li{
+  //  opacity: 0;
+  //}
+
+  .fly-in-text.hidden li:nth-child(1){ transform:translateX(200px) translateY(-100px);}
+  .fly-in-text.hidden li:nth-child(2){ transform:translateX(150px) translateY(150px);}
+  .fly-in-text.hidden li:nth-child(3){ transform:translateX(200px) translateY(-10px);}
+  .fly-in-text.hidden li:nth-child(4){ transform:translateX(-10px) translateY(-200px);}
+  .fly-in-text.hidden li:nth-child(5){ transform:translateX(-300px) translateY(280px);}
+  .fly-in-text.hidden li:nth-child(6){ transform:translateX(-40px) translateY(-100px);}
+  .fly-in-text.hidden li:nth-child(7){ transform:translateX(800px) translateY(50px);}
+}
+
+.quote {
+  //width:85%;
+  //height:100%;
+  //
+  //position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  //background-color: #EA638C;
+  color: #ffffff;
+
+  p {
+    padding: 50px;
+    font-size: 3em;
+    font-family: sketchToronto;
+  }
+}
+
+.travelSection{
+  background-image: url("../assets/bk4.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  text-align: center;
+
+  .quote{
+    margin-top: 300px;
+  }
+
+}
+
+.hobbySection{
+  background-image: url("../assets/bk5.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  .quote{
+    margin-top: 150px;
+    color:#30343F;
+  }
+
+}
+
+
+@media screen and (max-width: 800px) {
+  section{
+    padding:30px;
+    font-size:16px;;
+
+    .placeSection{
+
+      .quote{
+        padding:20px;
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section{
+    padding:30px;
+    font-size:10px;;
+
+    .placeSection{
+
+      .quote{
+        padding:20px;
+
+      }
+    }
+
+  }
+}

@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>ACS DataSet Visualization</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet"> 
+    <link href="css/animate.min.css" rel="stylesheet"> 
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+	    <script src="js/html5shiv.js"></script>
+	    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+    <!-- H590 D3 related javascripts -->
+    <script src="js/h590js/d3.min.js" charset="utf-8"></script>
+    <script src="js/h590js/d3.tip.js" charset="utf-8"></script>
+    <script src="js/h590js/topojson.v1.js" charset="utf-8"></script>
+    <script src="js/h590js/basic.js" charset="utf-8"></script>
+    <script src="js/h590js/data.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+    <script src="js/h590js/trends.js" charset="utf-8"></script>
+    <!-- H590 styling related sources -->
+    <link rel="stylesheet" type="text/css" href="css/h590css/h590.css">
+    <link rel="stylesheet" type="text/css" href="css/h590css/d3.css">
+
+</head><!--/head-->
+
+<body onload="firstTabFunc(event); thirdTabFunc(event)">
+    <header id="header">      
+        <div class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <h1><img src="images/logo.png" alt="logo"></h1>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="index.html">Work</a></li>
+                            <li><a href="resume.html">Resume</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="https://www.linkedin.com/in/shanglei-zhang"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                        </ul>
+                </div>
+                <hr class="style-one">
+            </div>
+        </div>
+    </header>
+    <!--/#header-->  
+
+
+    <section id="portfolio-information" class="padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="project-name overflow">
+                        <h1 class="bold">American Community Survey (ACS) Data Visualization</h1>
+                        <ul class="nav navbar-nav navbar-default">
+                            <li><i class="fa fa-clock-o"></i>April,2016</li>
+                            <li><i class="fa fa-tag"></i>UX/UI Design</li>
+                        </ul>
+                    </div>
+                    <div class="project-info overflow">
+                        <h2>Project Info</h2>
+                        <p>This project aims to visualize 13 variables of census data using a combination of choropleth map, pie chart, bar graph, small multiples and scatter plot. The primary dataset used in this project is 2015 American Community Survey (ACS). The ACS dataset is annually compiled by the US Census, and designed to provide broad demographic and socio-economic characteristics of the US population.</p>
+                        <p>This is a team project for a data visualization course(H590) in IUPUI.</p>
+                        <p>*Team Member: Shanglei Zhang, Pruthviraj narayanaswamy, Abhishek Murali, Alita Pinto</p>
+                    </div>
+                    <div class="skills overflow">
+                        <h2>What I did</h2>
+                        <ul class="nav navbar-nav navbar-default">
+                            <li><i class="fa fa-check-square"></i>Front-end</li>
+                            <li><i class="fa fa-check-square"></i>UX/UI Design</li>
+                            <li><i class="fa fa-check-square"></i>Data Visualization</li>
+                            <li><i class="fa fa-check-square"></i>Documentation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <img src="images/portfolio/datavis01" class="img-responsive" alt="">
+                    <div class="demo">
+                        <p>Click to see the project site.</p>
+                        <span class="btn-submit"><a href="demo/demoThree/index.html" target="_blank"
+                                                    style="color: #fff;outline: none;box-shadow: none;opacity: .8;">Project Site</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="carousel-container">
+                <h2 class="page-header">Interactive Visualization</h2>
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"></div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="tabcontent" id="first" style="overflow-x:auto;">
+
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <label style="font-size: 15px;">Data Category: </label>
+                                <select class="form-control" id="variable1Type"></select>
+                            </div>
+                            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                <input type="radio" id="state" name="region" value="state" checked="checked">
+                                <label>State</label>
+                                <br>
+                                <input type="radio" id="county" name="region" value="county">
+                                <label>County</label>
+                                <label id="secVarLabel" style="display: none;"> Variable2: </label>
+                                <select id="variable2Type" class="form-control" style="display: none;"></select>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <p>Click on any state to zoom in and explore detailed data. <br>Click on the same state to zoom out. </p>
+                            </div>
+
+                        </div>
+
+                        <table border="0">
+                            <tr>
+                                <td id="map" style="padding-top: 20px; padding-left: 20px; padding-right: 30px;">
+                                </td>
+                                <td id="mapLegend" align="right" >
+                                </td>
+                            </tr>
+                        </table>
+                        <table align="center" border="0" bordercolor="#BFC9CA" >
+                            <tr>
+                                <h1 id="totalName"></h1>
+                                <td id="chartArea" style="width: 900px; height: 305px;" align="left" >
+                                    <table border="0">
+                                        <tr>
+                                            <td align="left" >
+                                                <h1 id="chartHeading" ></h1>  <h1 id="totalValue"></h1> 
+                                            </td>   
+                                        </tr>
+                                    <table>
+                                    <table border="0">
+                                        <tr>
+                                            <p align="justify">The below chart shows the total value in percentages. Total refers to the total percentage population for the United States as compared to the selected state. This proportion is represented using a Pie Chart.  </p><br> 
+                                            <td align="center" ><h1 id="chartHeading" ></h1><h4> Charts <br></h4><p>(Click/Hover over <br>charts for more information) </p> </td>
+                                            <td id="tinyPie" align="center" style="width: 400px; padding-left: 20px;"></td>
+                                            <td id="pieLegend" align="center" > </td>
+                                            <td style="width: 150px; padding-left: 10px;">
+                                                <p style="padding-top: 20px;" id="totalName"></p>
+                                                <p style="padding-top: 10px;" id="itemValue"></p>
+                                                <p style="padding-top: 10px;" id="itemName"></p>
+                                            </td>
+                                        </tr>   
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="left" > 
+                                    <br>
+                                    <br>
+                                    <div id="barChart" style="display:inline-block;width: 1000px; height: 250px; padding-top: 40px;"></div>
+                                </td>
+                            </tr>   
+                        </table>
+                    </div>
+                </div>
+
+            <div id="carousel-container">
+                <h2 class="page-header">Design Process</h2>
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"></div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h3><strong>1. Brainstorm. Brainstorm. Brainstorm.</strong></h3>
+                        <p>How will the visualization help users understand the data? The first step was to define a clear objective. The data in this project is the 2015 American census information that includes demographic info, household income, living arrangement, education, means of transportation, travel time to work and so on. Identifying appropriate charts that best represent the data is the starting point. After the exploritory data analysis, we adapted a combination of choropleth map, pie chart, bar graph, small multiples and scatter plot to visualize different variables in the data set.</p>
+                        <img src="images/portfolio-details/datavis01-1.jpg" style="width:100%" class="img-responsive" alt="">
+                        <img src="images/portfolio-details/datavis01-2.jpg" style="width:100%" class="img-responsive" alt="">
+                        <p class="text-center"><em>Brainstorm (initial analysis of correlated variables and appropriate charts for data)</em></p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h3><strong>2. Sensemaking of the datavis navigation flow</strong></h3>
+                        <p>Having brainstormed the overall plan, and identified the types of charts for different variables, the initial page layout sketches helped inform the navigational flow. The choropleth map with a dropdown list provided an overall idea of the real estate available for placement of thirteen variables. Radio buttons are provided to switch between the State and County data. Clicking on the area of a state or a county, would dynamically reveal the detailed data in the form of pie chart and bar graph. The rationale is to reduce number of choices and operational steps to minimized the cognitive load on the user. </p>
+                        <p>A sequential color scheme is selected based on <a href="http://colorbrewer2.org/">Colorbrewer</a> to represent the different value ranges of the data, and ensure W3C compliant.</p>
+                        <img src="images/portfolio-details/datavis01-3.jpg" style="width:100%" class="img-responsive" alt="">
+                        <p class="text-center"><em>Sketch Wireframes and Navigation Flow</em></p>
+                        <img src="images/portfolio-details/datavis01-4.jpg" style="width:100%" class="img-responsive" alt="">
+                        <p class="text-center"><em>Choropleth Map with Dropdown List and Rdiao Buttons</em></p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h3><strong>3. Iterate. Iterate. Iterate. And drill into the details</strong></h3>
+                        <p>After the initial coding of the project was complete, there are several iterations upon the designs element and information seeking flow. Following the information-seeking mantra introduced by <a href="http://ieeexplore.ieee.org/document/545307/">Ben Shneiderman</a> : <Strong>Overview First -> Zoom and Filter -> Details on Demand</strong> (Ben Shneiderman), we decided to place a pie chart and a bar graph below the choropleth map, allowing users to drill down into the details of the data. Small multiples and scatter plot are also used to show our insight gained from the project.</p>
+                        <img src="images/portfolio-details/datavis01-5.jpg" style="width:100%" class="img-responsive" alt="">
+                        <p class="text-center"><em>Data Details</em></p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h3><strong>4. Insights & Conclusions</strong></h3>
+                        <p>With each iteration, details and correlations between the data are observed. Small multiples and a scatter plot are also used to show our insight gained from the project.</p>
+                        <p>The small multiple map showcased interesting trends present in the US census data. For instance, the native population is highest in southern states such as New Mexico, Texas, Oklahoma & Arizona. A quick google search revealed that the region of Oklahoma had settled occupation that dates back to a previous time in history. This may be attributed to one of the reasons the high number of natives living in Oklahoma.</p>
+                        <p>Further analysis revealed the African American population - largest group in racial minority, was concentrated more towards the southern states of Georgia, Florida, Virginia. If we look to history, we find that slaves from Africa were brought to the southern states for work on plantations. It is clear from our data, that even though this group has migrated to other areas, majority of them still find themselves living in the southern states.</p>
+
+                        <img src="images/portfolio-details/datavis01-6.jpg" style="width:100%" class="img-responsive" alt="">
+                        <p class="text-center"><em>Small Multiples for Comparison</em></p>
+                        
+                        <div class="tabcontent" id="third" style="overflow-x:auto;">
+                            <table border="0">
+                                <td style="padding-left: 10px;padding-right: 10px;" align="center" >
+                                <div id="scatterPlot"></div>
+                                <td style="padding-left: 30px;padding-right: 30px; border: 1px"  >
+                                    <div id="container">
+                                        <h1> Trend Analysis with a Scatter Plot </h1>
+                                        <h5> Circles sizes range from 6 to 25 </h5>
+                                        <p align="justify"> The scatter plot showcases a linear relationship between the median household income and per capita income. It also showcases the educational attainment in each state. It is interesting to note District of columbia has the highest median household income and per capita income but a very low educational attainment. It represents the educational attainment for each state. </p>
+                                    </div>
+                                </td>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h3><strong>References</strong></h3>
+                        <ul>
+                            <li>https://github.com/d3/d3-queue</li>
+                            <li>https://runkit.com/npm/d3-queue</li>
+                            <li>http://www.opengeocode.org/tutorials/USCensusAPI.php</li>
+                            <li>http://bl.ocks.org/mbostock/4206573</li>
+                            <li>https://bl.ocks.org/mbostock/4090846</li>
+                            <li>https://bost.ocks.org/mike/map/</li>
+                            <li>http://stackoverflow.com/questions/12652849/creating-and-accessing-2-dimensional-arrays-in-javascript</li>
+                            <li>http://stackoverflow.com/questions/14028259/json-response-parsing-in-javascript-to-get-key-value-pair</li>
+                            <li>http://stackoverflow.com/questions/10086167/d3-how-to-deal-with-json-data-structures</li>
+                            <li>http://www.cartographicperspectives.org/index.php/journal/article/view/cp76-hunt/1312</li>
+                            <li>http://www.npr.org/censusmap/#4.00/44.19/-82.86</li>
+                            <li>http://www.nytimes.com/interactive/2012/08/24/us/drought-crops.html?_r=1&</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+     <!--/#portfolio-information-->
+
+    <footer id="footer">
+           <div class="container">
+            <div class="row">
+                
+                <hr class="style-one">
+                
+                <div class="col-md-6">
+                    <div class="contact-info bottom">
+                        <h2>Contacts</h2>
+                        <address>
+                        E-mail: <a href="mailto:zhangshanglei@gmail.com">zhangshanglei@gmail.com</a> <br> 
+                        Phone: +1 (404) 771 3499 <br> 
+                        </address>
+
+                    </div> 
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-info bottom">
+                        <h2>Address</h2>
+                        <address>
+                        School of Informatics and Computing, IUPUI <br> 
+                        535 W. Michigan Street <br> 
+                        Indianapolis, IN 46202, U.S.A.<br> 
+                        </address>
+                    </div> 
+                </div>
+
+
+                <div class="col-sm-12">
+                    <div class="copyright-text text-center">
+                        <p>Copyright &copy; 2016 Shanglei Zhang</p>
+                        <p>All Rights Reserved.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!--/#footer-->
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/lightbox.min.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>  
+    <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+
+
+    <script>
+        //svg width and height
+        var width = 1100,
+            height = 500;
+            active = d3.select(null);
+            
+        var svg = d3.select("#map")
+                    .append("svg")
+                    .attr("width", width)
+                    .attr("height", height);
+                
+        //determine what type of map projection - scale: dimensions of projected map
+        var projection = d3.geoAlbersUsa()
+            .scale(800);
+
+        //attach the projection to the map  
+        //project the specified point from the sphere to the plane  - 2D from 3D
+        var path = d3.geoPath()
+                    .projection(projection);
+        
+    </script>   
+</body>
+</html>

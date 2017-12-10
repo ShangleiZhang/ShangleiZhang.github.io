@@ -1,0 +1,181 @@
+.wrapper{
+  min-height: 100%;
+  width: 100%;
+  background-image: url("../images/bk-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.landing{
+  height:100%;
+  width:100%;
+  color: #1A535C;
+  display: flex;
+
+  .welcome{
+    margin:350px auto;
+    text-align: center;
+
+    h1{
+      font-weight: 900;
+      font-size: 6em;
+    }
+
+    .social i{
+      padding:10px;
+    }
+
+    .social i:hover {
+      color: #F7FFF7;
+    }
+  }
+}
+
+.addTopic{
+  background-color:#4ECDC4;
+  border:none;
+  margin: 10px auto;
+  display: block;
+  width: 94%;
+  height: 50px;
+  padding: 6px 12px;
+  line-height: 1.5;
+  color: #F7FFF7;
+  font-size:20px;
+  font-weight:100;
+  visibility: hidden;
+  &:hover{
+    background-color:#1A535C;
+  }
+}
+
+
+
+.topic{
+  position:fixed;
+  z-index:199;
+  height:100%;
+  width:100%;
+  top:0;
+  right:0;
+  bottom: 0;
+  left:0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  visibility: hidden;
+
+  .bg3{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-color: rgba(26,83,92,0.3);
+  }
+  .topicList{
+    font-weight: 100;
+    border-bottom: solid 1px #1A535C;
+    z-index: 99;
+    width: 50%;
+    min-height: 60%;
+    margin: auto;
+    color: #1A535C;
+    background-color: #F7FFF7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .suHeader {
+      color: #1A535C;
+      padding: 30px 10px 30px 30px;
+      box-sizing: border-box;
+      text-align: center;
+
+      h3 {
+        font-size: 30px;
+        font-weight: 100;
+        text-align: center;
+      }
+    }
+
+    li{
+      padding: auto 30px;
+      list-style: none;
+      display: block;
+      text-align: center;
+    }
+
+    li:nth-child(odd){
+      font-weight: normal;
+      font-size: 24px;
+      padding-bottom:10px;
+    }
+    li:nth-child(even){
+      font-weight: lighter;
+      font-size: 16px;
+    }
+
+    .submit:hover{
+      background-color:#1A535C;
+    }
+
+    .addMoreTopic{
+      background-color:#4ECDC4;
+      border:none;
+      margin: 10px auto;
+      display: block;
+      width: 94%;
+      height: 50px;
+      padding: 6px 12px;
+      line-height: 1.5;
+      color: #F7FFF7;
+      font-size:20px;
+      font-weight:100;
+      background-image: none;
+    }
+    .addMoreTopic:hover{
+      background-color:#1A535C;
+    }
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+
+  .wrapper {
+    min-height: 100%;
+  }
+
+  .landing{
+    min-height:100%;
+
+    .welcome{
+      margin:200px auto;
+
+      h1{
+        font-weight: 700;
+        font-size: 4em;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .wrapper {
+    min-height: 100%;
+  }
+
+  .landing{
+    min-height:100%;
+
+    .welcome{
+      margin:200 px auto;
+
+      h1{
+        font-weight: 700;
+        font-size: 3em;
+      }
+    }
+  }
+}

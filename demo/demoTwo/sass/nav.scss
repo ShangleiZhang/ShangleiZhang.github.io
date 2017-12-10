@@ -1,0 +1,131 @@
+nav{
+  min-height: 100px;
+  width:100%;
+  background-color: #ffffff;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  position:fixed;
+  font-family: sketchToronto;
+  margin-top:0;
+  z-index: 99;
+
+
+  .logo{
+    width:350px;
+    min-height:100px;
+    background-color: #EA638C;
+    background-size: cover;
+    //background-image: url("../assets/logo.png");
+    text-align: center;
+    line-height: 100px;
+    color: #ffffff;
+    font-family: sketchToronto;
+    font-size: 3em;
+    //text-decoration: underline;
+
+  }
+
+  .navRight{
+    width:75%;
+    display: flex;
+  }
+
+  .links{
+    width:100%;
+  }
+
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    margin: 0;
+    padding:16px;
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+
+  li{
+    align-items: flex-end;
+  }
+
+  li a {
+    display: block;
+    color: #191919;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+
+  li a:hover {
+    background-color: #EA638C;
+    color: #ffffff;
+  }
+
+
+  .social{
+     padding:16px;
+     width:200px;
+     height:50px;
+     color:#30343F;
+     //background-color: #d9dbf1;
+     display:flex;
+     align-items: center;
+     justify-content: space-around;
+     }
+
+  .social i:hover{
+    color: #EA638C;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navRight{
+    width:75%;
+    height:100px;
+    display: flex;
+    flex-direction: column;
+  }
+  .social{
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  nav{
+    flex-direction: column;
+    background-color: rgba(0,0,0, 0.0);
+
+
+    .logo{
+      width:100%;
+      background-color: #EA638C;
+    }
+
+    .navRight{
+      width:100%;
+
+      .links ul{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255,255,255, 0.5);
+      }
+
+      .links ul li a {
+        display: block;
+        color: #191919;
+        text-align: center;
+        padding:10px;
+        text-decoration: none;
+        font-size: 1.2em;
+        border-bottom: 1px solid #ffffff;
+      }
+    }
+
+  }
+
+}

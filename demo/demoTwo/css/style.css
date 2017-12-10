@@ -1,0 +1,241 @@
+* {
+  margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 16px;
+  font-family: sketchToronto; }
+
+html, body {
+  height: 100%; }
+
+nav {
+  min-height: 100px;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  font-family: sketchToronto;
+  margin-top: 0;
+  z-index: 99; }
+  nav .logo {
+    width: 350px;
+    min-height: 100px;
+    background-color: #EA638C;
+    background-size: cover;
+    text-align: center;
+    line-height: 100px;
+    color: #ffffff;
+    font-family: sketchToronto;
+    font-size: 3em; }
+  nav .navRight {
+    width: 75%;
+    display: flex; }
+  nav .links {
+    width: 100%; }
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    margin: 0;
+    padding: 16px;
+    overflow: hidden;
+    background-color: #ffffff; }
+  nav li {
+    align-items: flex-end; }
+  nav li a {
+    display: block;
+    color: #191919;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 1.5em; }
+  nav li a:hover {
+    background-color: #EA638C;
+    color: #ffffff; }
+  nav .social {
+    padding: 16px;
+    width: 200px;
+    height: 50px;
+    color: #30343F;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+  nav .social i:hover {
+    color: #EA638C; }
+
+@media screen and (max-width: 1000px) {
+  .navRight {
+    width: 75%;
+    height: 100px;
+    display: flex;
+    flex-direction: column; }
+
+  .social {
+    visibility: hidden; } }
+@media screen and (max-width: 800px) {
+  nav {
+    flex-direction: column;
+    background-color: transparent; }
+    nav .logo {
+      width: 100%;
+      background-color: #EA638C; }
+    nav .navRight {
+      width: 100%; }
+      nav .navRight .links ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.5); }
+      nav .navRight .links ul li a {
+        display: block;
+        color: #191919;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 1.2em;
+        border-bottom: 1px solid #ffffff; } }
+@font-face {
+  font-family: sketchToronto;
+  src: url("../fonts/sketchToronto.otf"); }
+.content {
+  height: 100%; }
+
+section {
+  min-height: 100%;
+  background-color: #ffffff; }
+  section:nth-child(odd) {
+    background-color: #FFD9DA; }
+
+.homeSection {
+  background-image: url("../assets/bk1.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; }
+  .homeSection svg {
+    background-color: rgba(92, 39, 55, 0.3);
+    max-width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%; }
+  .homeSection .text {
+    font-family: sketchToronto;
+    font-size: 20px;
+    text-transform: uppercase; }
+  .homeSection .text-stroke {
+    fill: none;
+    stroke: #EA638C;
+    stroke-width: 2px;
+    stroke-dashoffset: -900;
+    stroke-dasharray: 900;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    animation: dash 2.5s ease-in-out forwards; }
+  .homeSection .text-stroke:nth-child(2) {
+    animation-delay: .3s; }
+  .homeSection .text-stroke:nth-child(3) {
+    animation-delay: .6s; }
+  .homeSection .text-stroke-2 {
+    stroke: #f6bdfa;
+    animation-delay: 1.2s; }
+  .homeSection .text-stroke:nth-child(5) {
+    animation-delay: 1.5s; }
+  .homeSection .text-stroke:nth-child(6) {
+    animation-delay: 1.8s; }
+@keyframes dash {
+  100% {
+    stroke-dashoffset: 0; } }
+.placeSection {
+  height: 100%;
+  position: relative;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, rgba(92, 39, 55, 0.3) 0%, rgba(92, 39, 55, 0.3) 100%), url("../assets/bk2.jpg"); }
+  .placeSection object {
+    padding: 10% 20%;
+    opacity: 0; }
+
+.workSection {
+  background-image: url("../assets/bk3.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center; }
+  .workSection .fly-in-text {
+    width: 35%;
+    list-style: none;
+    position: relative;
+    margin-left: 53%;
+    margin-top: 20%;
+    transform: translateX(-50%) translateY(-50%); }
+  .workSection .fly-in-text li {
+    display: inline-block;
+    margin-right: 50px;
+    font-family: sketchToronto;
+    font-size: 3em;
+    font-weight: 400;
+    color: #EA638C;
+    opacity: 1;
+    transition: all 2.5s ease; }
+  .workSection .fly-in-text li:last-child {
+    margin-right: 0; }
+  .workSection .fly-in-text.hidden li:nth-child(1) {
+    transform: translateX(200px) translateY(-100px); }
+  .workSection .fly-in-text.hidden li:nth-child(2) {
+    transform: translateX(150px) translateY(150px); }
+  .workSection .fly-in-text.hidden li:nth-child(3) {
+    transform: translateX(200px) translateY(-10px); }
+  .workSection .fly-in-text.hidden li:nth-child(4) {
+    transform: translateX(-10px) translateY(-200px); }
+  .workSection .fly-in-text.hidden li:nth-child(5) {
+    transform: translateX(-300px) translateY(280px); }
+  .workSection .fly-in-text.hidden li:nth-child(6) {
+    transform: translateX(-40px) translateY(-100px); }
+  .workSection .fly-in-text.hidden li:nth-child(7) {
+    transform: translateX(800px) translateY(50px); }
+
+.quote {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #ffffff; }
+  .quote p {
+    padding: 50px;
+    font-size: 3em;
+    font-family: sketchToronto; }
+
+.travelSection {
+  background-image: url("../assets/bk4.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  text-align: center; }
+  .travelSection .quote {
+    margin-top: 300px; }
+
+.hobbySection {
+  background-image: url("../assets/bk5.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; }
+  .hobbySection .quote {
+    margin-top: 150px;
+    color: #30343F; }
+
+@media screen and (max-width: 800px) {
+  section {
+    padding: 30px;
+    font-size: 16px; }
+    section .placeSection .quote {
+      padding: 20px; } }
+@media screen and (max-width: 600px) {
+  section {
+    padding: 30px;
+    font-size: 10px; }
+    section .placeSection .quote {
+      padding: 20px; } }

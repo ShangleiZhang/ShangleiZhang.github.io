@@ -1,0 +1,48 @@
+.wrapper {
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/bk-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.landing {
+  height: 100%;
+  width: 100%;
+  color: #1A535C;
+  display: flex; }
+  .landing .welcome {
+    margin: 350px auto;
+    text-align: center; }
+    .landing .welcome h1 {
+      font-weight: 900;
+      font-size: 6em; }
+    .landing .welcome .social i {
+      padding: 10px; }
+    .landing .welcome .social i:hover {
+      color: #F7FFF7; }
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    min-height: 100%; }
+
+  .landing {
+    min-height: 100%; }
+    .landing .welcome {
+      margin: 200 px auto; }
+      .landing .welcome h1 {
+        font-weight: 700;
+        font-size: 4em; } }
+@media screen and (max-width: 600px) {
+  .wrapper {
+    min-height: 100%; }
+
+  .landing {
+    min-height: 100%; }
+    .landing .welcome {
+      margin: 200 px auto; }
+      .landing .welcome h1 {
+        font-weight: 700;
+        font-size: 3em; } }
+
+/*# sourceMappingURL=contents.css.map */
